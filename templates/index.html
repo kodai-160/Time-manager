@@ -4,8 +4,18 @@
         <meta charset="UTF-8">
         <title>タイマー</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="#">サービス紹介</a></li>
+                <li class="right-link"><a href="#">SignUp</a></li>
+                <li class="right-link"><a href="#">SignIn</a></li>
+            </ul>
+        </nav>
         <div class="cowntdown-container">
             <h1>Countdown to end of today</h1>
             <h2>You have ...</h2>
@@ -14,6 +24,14 @@
                 <p class="time"><span id="min"></span>minutes</p>
                 <p class="time"><span id="sec"></span>seconds</p>
             </div>
+        </div>
+        <div class="explanation-container">
+            <h1>一日の時間をどのように使っていますか？正しく時間を使うために</h1>
+            <h2>私たちの一日は、限られた24時間から成り立っています。この貴重な時間をどのように使うかは、個人の生産性、幸福感、さらには健康状態にも大きく影響します。時間は一度過ぎれば戻ってこないため、毎日を最大限に活用することが重要です。そこで、効率的な時間の使い方をサポートするために、私たちはこのタイマーアプリを開発しました。</h2>
+            <br>
+            <h2>効率的な時間管理のための第一歩</h2>
+            <h2>このアプリは、あなたの一日を計画的に管理し、時間を最適に活用するお手伝いをします。タスクを設定し、それぞれに時間を割り当てることで、焦点を合わせるべきことに集中しやすくなります。また、設定したタイマーが終了することで、適切な休憩時間を取ることも忘れずに済みます。</h2>
+
         </div>
     </body>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
