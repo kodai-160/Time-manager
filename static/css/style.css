@@ -9,6 +9,13 @@ html, body {
     margin: 0;
 }
 
+.fullscreen-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center; /* 画像を中央に配置 */
+}  
+
 /* ナビゲーションバーのスタイリング */
 nav {
     width: 100%;

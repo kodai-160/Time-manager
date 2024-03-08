@@ -3,6 +3,7 @@ import cv2
 import dlib
 from imutils import face_utils
 from scipy.spatial import distance
+import winsound
 
 cap = cv2.VideoCapture(0)
 face_casecade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
@@ -57,6 +58,7 @@ while True:
         if (left_eye_ear + right_eye_ear) < 0.40:
             cv2.putText(rgb, "Sleeping eyes. Wake up!",
                 (10, 180), cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 255), 3, 1)
+            winsound.Beep(1000, 500)
             
     fps = cv2.getTickFrequency() / (cv2.getTickCount() - tick)
     cv2.putText(rgb, "FPS:{}".format(int(fps)),
